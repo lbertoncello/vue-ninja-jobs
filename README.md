@@ -1,4 +1,4 @@
-# ninja-jobs
+# vue-ninja-jobs
 
 ## Description
 
