@@ -2,7 +2,8 @@
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <!-- It will take the route in which the value of the property name is 'About' -->
-    <router-link :to="{ name: 'About' }">About</router-link>
+    <router-link :to="{ name: 'About' }">About</router-link> |
+    <router-link :to="{ name: 'Jobs' }">Jobs</router-link>
   </div>
   <!-- This is the place where the router content will be mounted -->
   <router-view/>
