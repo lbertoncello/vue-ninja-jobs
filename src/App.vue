@@ -3,6 +3,7 @@
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
+  <!-- This is the place where the router content will be mounted -->
   <router-view/>
 </template>
 
