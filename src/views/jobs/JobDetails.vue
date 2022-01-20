@@ -5,11 +5,13 @@
 
 <script>
 export default {
-  data() {
-    return {
-      id: this.$route.params.id
-    }
-  }
+  props: [ 'id' ],
+  // The way below is used when 'props' is false on the router.
+  // data() {
+  //   return {
+  //     id: this.$route.params.id
+  //   }
+  // }
 }
 </script>
 
