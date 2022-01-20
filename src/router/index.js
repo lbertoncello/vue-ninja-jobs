@@ -5,7 +5,6 @@ import NotFound from '../views/NotFound.vue'
 import Jobs from '../views/jobs/Jobs.vue'
 import JobDetails from '../views/jobs/JobDetails.vue'
 
-
 const routes = [
   {
     path: '/',
@@ -15,6 +14,12 @@ const routes = [
   {
     path: '/about',
     name: 'About',
+    /*
+     * This is how to use lazy loading. 
+     * That way, the JS code for the page will be loaded only when the user navigates to it,
+     * not initially when the app is loaded.
+     */
+    // component: () => import('../views/About.vue'),
     component: About
   },
   {
