@@ -26,6 +26,11 @@ const routes = [
     component: JobDetails,
     // Allows to pass any route parameters as props. That way, we do not need do declare them in data().
     props: true
+  },
+  // redirect
+  {
+    path: '/all-jobs',
+    redirect: '/jobs'
   }
 ]
 
