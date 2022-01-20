@@ -1,17 +1,30 @@
 <template>
-  <h1>Job Details Page</h1>
-  <p>The Job id is {{ id }}</p>
+  <div v-if="job">
+    <h1>{{ job.title }}</h1>
+    <p>The Job id is {{ id }}</p>
+    <p>{{ job.details }}</p>
+  </div>
+  <div v-else>
+    <p>Loading job details...</p>
+  </div>
 </template>
 
 <script>
 export default {
   props: [ 'id' ],
-  // The way below is used when 'props' is false on the router.
-  // data() {
-  //   return {
-  //     id: this.$route.params.id
-  //   }
-  // }
+  data() {
+    return {
+      // The way below is used when 'props' is false on the router.
+      // id: this.$route.params.id
+      job: null,
+    }
+  },
+  mounted() {
+    fetch(`http://localhost:3000/jobs/${this.id}`)
+      .then((res) => res.json())
+      .then((data) => this.job = data)
+      .catch((error) => console.log(error.message))
+  }
 }
 </script>
 
